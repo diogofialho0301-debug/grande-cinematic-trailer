@@ -21,7 +21,7 @@ python3 audio.py build/soundtrack.wav
 # concat picture segments (each is 4:4:4 near-lossless) and encode the delivery master
 ffmpeg -y -loglevel error -f concat -safe 0 -i build/segments.txt -i build/soundtrack.wav \
   -map 0:v:0 -map 1:a:0 \
-  -c:v libx264 -preset slow -crf 14 -profile:v high -pix_fmt yuv420p -r 60 \
+  -c:v libx264 -preset slow -crf 17 -maxrate 22M -bufsize 44M -profile:v high -pix_fmt yuv420p -r 60 \
   -x264-params "keyint=120:min-keyint=60:aq-mode=3" \
   -vf "scale=1920:1080:flags=lanczos,setsar=1" \
   -c:a aac -b:a 320k -ar 48000 \
