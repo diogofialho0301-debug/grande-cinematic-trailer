@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>GRANDE Trailer Renderer</title>
+<style>
+  @font-face { font-family: 'Cinzel'; font-weight: 700; src: url('../assets/fonts/Cinzel-Bold.ttf'); }
+  @font-face { font-family: 'Cinzel'; font-weight: 900; src: url('../assets/fonts/Cinzel-Black.ttf'); }
+  @font-face { font-family: 'Montserrat'; font-weight: 300; src: url('../assets/fonts/Montserrat-Light.ttf'); }
+  @font-face { font-family: 'Montserrat'; font-weight: 600; src: url('../assets/fonts/Montserrat-SemiBold.ttf'); }
+  @font-face { font-family: 'Bebas'; src: url('../assets/fonts/BebasNeue.ttf'); }
+  html, body { margin: 0; padding: 0; background: #000; width: 1920px; height: 1080px; overflow: hidden; }
+  #c { position: absolute; left: 0; top: 138px; width: 1920px; height: 804px; display: block; }
+  #ov { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; pointer-events: none; }
+  .txt { position: absolute; left: 0; width: 1920px; text-align: center; white-space: nowrap; }
+  .txt span { display: inline-block; will-change: transform, opacity, filter; }
+  .gold span {
+    background: linear-gradient(180deg, #fff6d8 0%, #f6dc95 30%, #d9a945 55%, #a8721f 78%, #f0cf7c 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .serif { font-family: 'Cinzel'; font-weight: 700; }
+  .black { font-family: 'Cinzel'; font-weight: 900; }
+  .sans { font-family: 'Montserrat'; font-weight: 600; }
+  .light { font-family: 'Montserrat'; font-weight: 300; }
+  .shadow { filter: drop-shadow(0 0 18px rgba(0,0,0,0.85)) drop-shadow(0 0 4px rgba(0,0,0,0.6)); }
+  .cap { position: absolute; left: 150px; bottom: 182px; color: #e9d29a; font-family: 'Montserrat'; font-weight: 600; font-size: 19px; letter-spacing: 0.55em; white-space: nowrap; }
+  .cap i { display: inline-block; width: 46px; height: 2px; background: linear-gradient(90deg, #f3d58a, #9a6a1c); vertical-align: middle; margin-right: 22px; transform-origin: left center; }
+  .cap b { font-weight: 300; color: rgba(255,255,255,0.55); margin-right: 18px; letter-spacing: 0.3em; }
+</style>
+</head>
+<body>
+<canvas id="c" width="1920" height="804"></canvas>
+<div id="ov"></div>
+<script type="importmap">
+{ "imports": { "three": "../node_modules/three/build/three.module.js", "three/addons/": "../node_modules/three/examples/jsm/" } }
+</script>
+<script type="module" src="./main.js"></script>
+</body>
+</html>
