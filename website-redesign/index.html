@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>GRANDE Roleplay – FiveM Roleplay Server</title>
+<meta name="description" content="GRANDE Roleplay: ernsthaftes FiveM-Roleplay mit eigenen Scripts, Cayo Porto, Grenze und Zoll, Werkstätten und vielen legalen Jobs.">
+<meta name="theme-color" content="#09090b">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"GRANDE Roleplay","alternateName":["GRANDE RP","GRANDE"],"url":"https://granderoleplay.ch/"}</script>
+<meta property="og:title" content="GRANDE Roleplay – FiveM Roleplay Server">
+<meta property="og:description" content="GRANDE Roleplay: ernsthaftes FiveM-Roleplay mit eigenen Scripts, Cayo Porto, Grenze und Zoll, Werkstätten und vielen legalen Jobs.">
+<meta property="og:image" content="https://granderoleplay.ch/assets/img/logo-og.png">
+<meta property="og:url" content="https://granderoleplay.ch/">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/icon-32.png">
+<link rel="apple-touch-icon" href="assets/img/icon-192.png">
+<link rel="preload" href="assets/fonts/Cinzel.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/BigShouldersDisplay.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/video/hero-poster.jpg" as="image">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="GRANDE Roleplay – Startseite"><img src="assets/img/logo-grande.webp" alt="GRANDE Roleplay" width="480" height="161"></a>
+    <ul class="nav-links">
+      <li><a href="index.html" aria-current="page">Start</a></li>
+      <li><a href="#stadt">Die Stadt</a></li>
+      <li><a href="#fraktionen">Fraktionen</a></li>
+      <li><a href="#status">Status</a></li>
+      <li><a href="regelwerk.html">Regelwerk</a></li>
+      <li><a href="philosophie.html">Philosophie</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a class="btn btn-gold btn-sm" href="https://discord.gg/granderoleplay" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.3 4.4A19.6 19.6 0 0 0 15.4 3l-.6 1.3a18 18 0 0 0-5.6 0L8.6 3a19.5 19.5 0 0 0-4.9 1.4C.6 9 0 13.5.3 18a19.7 19.7 0 0 0 6 3l1.3-2a12.7 12.7 0 0 1-2-1l.5-.4a14 14 0 0 0 11.8 0l.5.4a12.8 12.8 0 0 1-2 1l1.3 2a19.6 19.6 0 0 0 6-3c.4-5.2-.7-9.6-3.4-13.6ZM8.5 15.3c-1.2 0-2.1-1.1-2.1-2.4s.9-2.4 2.1-2.4 2.2 1.1 2.1 2.4c0 1.3-.9 2.4-2.1 2.4Zm7 0c-1.2 0-2.1-1.1-2.1-2.4s.9-2.4 2.1-2.4 2.2 1.1 2.1 2.4c0 1.3-.9 2.4-2.1 2.4Z"/></svg>
+        <span class="btn-label">Discord</span>
+      </a>
+      <button class="menu-btn" type="button" data-menu aria-expanded="false" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<nav class="mobile-menu" aria-label="Hauptmenü">
+  <button class="menu-btn close" type="button" data-menu aria-label="Menü schliessen" style="display:block"><span style="transform:translateY(5.5px) rotate(45deg)"></span><span style="opacity:0"></span><span style="transform:translateY(-5.5px) rotate(-45deg)"></span></button>
+  <a class="m-link" href="index.html">Start</a>
+  <a class="m-link" href="#stadt">Die Stadt</a>
+  <a class="m-link" href="#fraktionen">Fraktionen</a>
+  <a class="m-link" href="#status">Status</a>
+  <a class="m-link" href="regelwerk.html">Regelwerk</a>
+  <a class="m-link" href="philosophie.html">Philosophie</a>
+  <a class="m-link" href="impressum.html">Impressum</a>
+  <div class="m-cta">
+    <a class="btn btn-gold" href="fivem://connect/cfx.re/join/qqqepoz">Jetzt spielen</a>
+    <a class="btn btn-ghost" href="https://discord.gg/granderoleplay" target="_blank" rel="noopener">Discord</a>
+  </div>
+</nav>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero bars" aria-labelledby="hero-title">
+    <div class="hero-media" aria-hidden="true">
+      <video autoplay muted loop playsinline preload="auto" poster="assets/video/hero-poster.jpg">
+        <source src="assets/video/hero-loop.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="wrap hero-inner">
+      <span class="eyebrow">FiveM Roleplay</span>
+      <img class="hero-logo" src="assets/img/logo.webp" alt="GRANDE" width="900" height="429">
+      <h1 id="hero-title" class="h-display"><span class="foil">Dein Leben. Deine Stadt.</span></h1>
+      <p class="lead">Ernsthaftes Roleplay mit eigenen Systemen, einer eigenen Region und einer Community, die gemeinsam Geschichten schreibt.</p>
+      <div class="hero-cta">
+        <a class="btn btn-gold" href="fivem://connect/cfx.re/join/qqqepoz">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4v16l13-8z" fill="currentColor"/></svg>Jetzt spielen
+        </a>
+        <a class="btn btn-ghost" href="https://discord.gg/granderoleplay" target="_blank" rel="noopener">Discord beitreten</a>
+      </div>
+      <div class="hero-meta">
+        <span class="chip" data-status data-state="loading"><span class="dot"></span><span data-st="label">Status wird geladen …</span><b><span data-st="players">–</span> / <span data-st="max">–</span></b></span>
+        <span class="chip">Ab 18 Jahren</span>
+        <span class="chip">Schweiz</span>
+      </div>
+    </div>
+    <div class="scroll-cue" aria-hidden="true"></div>
+  </section>
+
+  <!-- MARQUEE: facts from the server info -->
+  <div class="marquee" aria-label="Server-Highlights">
+    <div class="marquee-track">
+      <span>Viele selbst entwickelte Scripts</span><span>Eigene Region Cayo Porto</span><span>Grenze &amp; Zoll</span><span>Custom Kleidung und Mappings</span><span>GRANDE Tuning</span><span>GRANDE HP</span><span>SaltyChat</span><span>Realistisches, filmreifes Roleplay</span>
+      <span aria-hidden="true">Viele selbst entwickelte Scripts</span><span aria-hidden="true">Eigene Region Cayo Porto</span><span aria-hidden="true">Grenze &amp; Zoll</span><span aria-hidden="true">Custom Kleidung und Mappings</span><span aria-hidden="true">GRANDE Tuning</span><span aria-hidden="true">GRANDE HP</span><span aria-hidden="true">SaltyChat</span><span aria-hidden="true">Realistisches, filmreifes Roleplay</span>
+    </div>
+  </div>
+
+  <!-- DIE STADT -->
+  <section class="band" id="stadt" aria-labelledby="stadt-title">
+    <div class="wrap">
+      <header class="sec-head reveal">
+        <span class="eyebrow">Server Info</span>
+        <h2 id="stadt-title" class="h-display h2">Neuer Server.<br><span class="foil">Neue Regeln.</span></h2>
+        <p class="lead">Bereit, die Szene aufzumischen. GRANDE ist eine Community im Aufbau – sei von Anfang an dabei.</p>
+      </header>
+
+      <div class="bento">
+        <article class="tile tile-wide tile-tall tile-route reveal">
+          <div class="route-copy">
+            <span class="eyebrow">Eigene Region</span>
+            <h3>Cayo Porto</h3>
+            <p>Zwischen der Stadt und Cayo Porto liegt der Zollposten. Dort darf das GPD jeden und jedes Fahrzeug kontrollieren, auch ohne Verdacht. Jede Fahrt über die Grenze kann der Anfang einer Geschichte sein.</p>
+          </div>
+          <div class="route" aria-hidden="true">
+            <svg viewBox="0 0 640 150">
+              <path class="glow" d="M40 110 C 180 110, 220 40, 320 52 S 500 112, 600 70"/>
+              <path class="path" d="M40 110 C 180 110, 220 40, 320 52 S 500 112, 600 70"/>
+              <circle class="node" cx="40" cy="110" r="9"/><circle class="node node-hot" cx="320" cy="52" r="7"/><circle class="node" cx="600" cy="70" r="9"/>
+              <text x="40" y="142" text-anchor="start">Die Stadt</text>
+              <text x="320" y="24" text-anchor="middle">Zollposten</text>
+              <text x="600" y="106" text-anchor="end">Cayo Porto</text>
+              <text class="sub" x="320" y="88" text-anchor="middle">Grenze &amp; Zoll</text>
+            </svg>
+          </div>
+        </article>
+
+
+        <article class="tile tile-half reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3 4 6l2 4 2-1v12h8V9l2 1 2-4-4-3-2 2h-4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+          <h3>Custom Kleidung</h3>
+          <p>Custom Kleidung für einen Charakter mit eigener Geschichte und eigenem Stil.</p>
+        </article>
+
+        <article class="tile tile-half reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+          <h3>Custom Mappings</h3>
+          <p>Custom Mappings für eine Stadt, die sich echt anfühlt.</p>
+        </article>
+
+        <article class="tile reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Eigene Scripts</h3>
+          <p>Viele selbst entwickelte Scripts. Eigene Systeme und angepasstes Framework.</p>
+        </article>
+        <article class="tile tile-wide reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+          <h3>Werkstätten</h3>
+          <p>Zwei Werkstätten, zwei Spezialisierungen. Gegenüber Kunden gilt faires Arbeiten mit realistischen Preisen.</p>
+          <div class="workshops">
+            <div class="workshop"><strong>GRANDE Tuning</strong><span>Optik, Felgen, Lack, Licht, Innenraum und Reparatur</span></div>
+            <div class="workshop"><strong>GRANDE HP</strong><span>Leistung, Tuning und Nitro</span></div>
+          </div>
+        </article>
+
+        <article class="tile tile-wide reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17c3 0 3-2 6-2s3 2 6 2 3-2 6-2M3 12c3 0 3-2 6-2s3 2 6 2 3-2 6-2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <h3>Legale Jobs &amp; Routen</h3>
+          <p>Ehrliche Arbeit gehört genauso zur Stadt wie die Unterwelt.</p>
+          <ul class="tags">
+            <li>Angeln</li><li>Hochseeangeln</li><li>Recycling</li><li>Steinbruch</li><li>Imkerei</li><li>Strassenbau</li><li>Hochdruckreiniger</li>
+          </ul>
+        </article>
+
+        <article class="tile reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3ZM5 11a7 7 0 0 0 14 0M12 18v3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <h3>Voice mit SaltyChat</h3>
+          <p>Gesprochen wird im Spiel über TeamSpeak mit SaltyChat. Reife, eine ruhige Stimme und ein gutes Mikrofon zählen.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRAKTIONEN & JOBS -->
+  <section class="band band-alt" id="fraktionen" aria-labelledby="frak-title">
+    <div class="wrap">
+      <header class="sec-head reveal">
+        <span class="eyebrow">Fraktionen &amp; Jobs</span>
+        <h2 id="frak-title" class="h-display h2">Wähle deine <span class="foil">Seite</span></h2>
+        <p class="lead">Ob du als Polizist, Mechaniker, Fischer oder auf der kriminellen Seite unterwegs bist: Fraktionen verhalten sich wie ihr Vorbild. Der Staat professionell, eine Mafia diskret, eine Gang wie eine Gang.</p>
+      </header>
+
+      <div class="dossier-tabs" role="tablist" aria-label="Fraktionsarten">
+        <button class="dossier-tab" role="tab" type="button" id="tab-staat" aria-controls="d-staat" aria-selected="true">Staat</button>
+        <button class="dossier-tab" role="tab" type="button" id="tab-firmen" aria-controls="d-firmen" aria-selected="false" tabindex="-1">Firmen &amp; Dienste</button>
+        <button class="dossier-tab" role="tab" type="button" id="tab-illegal" aria-controls="d-illegal" aria-selected="false" tabindex="-1">Untergrund</button>
+      </div>
+
+      <article class="dossier reveal" id="d-staat" role="tabpanel" aria-labelledby="tab-staat">
+        <div class="dossier-side">
+          <span class="stamp">Staatliche Fraktionen</span>
+          <div>
+            <h3>Recht &amp; Ordnung</h3>
+            <p>GPD und Staat dürfen eingreifen, um Bürger zu schützen. Am Zollposten zwischen der Stadt und Cayo Porto kontrolliert das GPD jeden und jedes Fahrzeug.</p>
+          </div>
+        </div>
+        <ul class="roster">
+          <li><span class="code">GPD</span><div><strong>Polizei</strong><span>Kontrollen, Verfolgungen und die Grenze. Bei Kämpfen zwischen Fraktionen beobachtet und dokumentiert das GPD aus der Distanz.</span></div></li>
+          <li><span class="code">GMD</span><div><strong>Medizinischer Dienst</strong><span>Den Anweisungen des GMD wird gefolgt. Nur der GMD stellt einen Tod fest.</span></div></li>
+          <li><span class="code">§</span><div><strong>Justiz</strong><span>Teil der staatlichen Fraktionen neben GPD und GMD.</span></div></li>
+          <li><span class="code">ZOLL</span><div><strong>Zoll</strong><span>Beschlagnahmte Ware bleibt im Zollhäuschen. Sie wird nicht privat behalten.</span></div></li>
+        </ul>
+      </article>
+
+      <article class="dossier" id="d-firmen" role="tabpanel" aria-labelledby="tab-firmen" hidden>
+        <div class="dossier-side">
+          <span class="stamp">Firmen &amp; geschützte Berufe</span>
+          <div>
+            <h3>Die Stadt am Laufen halten</h3>
+            <p>Geschützte Berufe werden samt Fahrzeug und Ausrüstung nicht angegriffen, ausgeraubt oder entführt.</p>
+          </div>
+        </div>
+        <ul class="roster">
+          <li><span class="code">GT</span><div><strong>GRANDE Tuning</strong><span>Optik, Felgen, Lack, Licht, Innenraum und Reparatur.</span></div></li>
+          <li><span class="code">HP</span><div><strong>GRANDE HP</strong><span>Leistung, Tuning und Nitro.</span></div></li>
+          <li><span class="code">TAXI</span><div><strong>Taxi</strong><span>Geschützter Beruf.</span></div></li>
+          <li><span class="code">ADS</span><div><strong>Abschleppdienst</strong><span>Geschützter Beruf.</span></div></li>
+          <li><span class="code">WZL</span><div><strong>Weazel News</strong><span>Geschützter Beruf.</span></div></li>
+        </ul>
+      </article>
+
+      <article class="dossier" id="d-illegal" role="tabpanel" aria-labelledby="tab-illegal" hidden>
+        <div class="dossier-side">
+          <span class="stamp">Illegale Fraktionen</span>
+          <div>
+            <h3>Gangs, Mafias, Kartelle, MCs</h3>
+            <p>Anwesen, Routen und Konflikte mit klaren Regeln. Neue Fraktionen haben Aufbauschutz, solange sie nicht selbst aggressiv auftreten.</p>
+          </div>
+        </div>
+        <ul class="roster">
+          <li><span class="code">15+</span><div><strong>Fraktion gründen</strong><span>Mindestens 15 Mitglieder mit Discord-Namen, Name, Hintergrund, Ränge, Farben, Outfit mit Bildern und gewünschtes Anwesen.</span></div></li>
+          <li><span class="code">⌖</span><div><strong>Routen</strong><span>Der Routenbesitzer darf im Umkreis von 100 m ohne Ansage schiessen, mit RP-Grund.</span></div></li>
+          <li><span class="code">48h</span><div><strong>Anwesen stürmen</strong><span>Höchstens einmal pro 48 Stunden pro Fraktion, zwischen 19 und 0 Uhr.</span></div></li>
+          <li><span class="code">$</span><div><strong>Überfälle</strong><span>Grosse Überfälle (Juwelier, Staatsbank) gibt es pro Gruppe einmal in 24 Stunden.</span></div></li>
+        </ul>
+      </article>
+
+      <div class="dossier-foot">
+        <span>Alle Angaben aus dem offiziellen Regelwerk.</span>
+        <a class="link-arrow" href="regelwerk.html#fraktionen">Fraktionsregeln lesen <span>→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATUS + DISCORD -->
+  <section class="band" id="status" aria-labelledby="status-title">
+    <div class="wrap">
+      <header class="sec-head center reveal">
+        <span class="eyebrow">Live</span>
+        <h2 id="status-title" class="h-display h2">Die Stadt <span class="foil">wartet</span></h2>
+      </header>
+      <div class="status-grid">
+        <article class="pass reveal" data-status data-state="loading" aria-live="polite">
+          <div class="pass-top">
+            <div class="pass-brand"><img src="assets/img/logo-grande.webp" alt="" width="480" height="161"><span class="pass-label">Server-Status</span></div>
+            <span class="badge"><span class="dot"></span><span data-st="label">Status wird geladen …</span></span>
+          </div>
+          <div class="pass-count"><span class="num" data-st="players">–</span><span class="of">/ <span data-st="max">–</span></span><span class="unit">Spieler</span></div>
+          <div class="meter"><i data-st="bar"></i></div>
+          <div class="pass-actions">
+            <a class="btn btn-gold" href="fivem://connect/cfx.re/join/qqqepoz"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4v16l13-8z" fill="currentColor"/></svg>Jetzt beitreten</a>
+            <span class="connect-code">cfx.re/join/qqqepoz <button type="button" data-copy="cfx.re/join/qqqepoz" data-copy-msg="Connect-Adresse kopiert">Kopieren</button></span>
+          </div>
+          <p class="pass-foot" data-st="time">In FiveM: F8 drücken und <code>connect cfx.re/join/qqqepoz</code> eingeben.</p>
+        </article>
+
+        <article class="discord-card reveal" data-discord>
+          <div>
+            <div class="d-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.3 4.4A19.6 19.6 0 0 0 15.4 3l-.6 1.3a18 18 0 0 0-5.6 0L8.6 3a19.5 19.5 0 0 0-4.9 1.4C.6 9 0 13.5.3 18a19.7 19.7 0 0 0 6 3l1.3-2a12.7 12.7 0 0 1-2-1l.5-.4a14 14 0 0 0 11.8 0l.5.4a12.8 12.8 0 0 1-2 1l1.3 2a19.6 19.6 0 0 0 6-3c.4-5.2-.7-9.6-3.4-13.6ZM8.5 15.3c-1.2 0-2.1-1.1-2.1-2.4s.9-2.4 2.1-2.4 2.2 1.1 2.1 2.4c0 1.3-.9 2.4-2.1 2.4Zm7 0c-1.2 0-2.1-1.1-2.1-2.4s.9-2.4 2.1-2.4 2.2 1.1 2.1 2.4c0 1.3-.9 2.4-2.1 2.4Z"/></svg></div>
+          </div>
+          <div style="display:grid;gap:12px">
+            <h3>Community auf Discord</h3>
+            <p>Hier triffst du die Community. Support und Anfragen laufen über Tickets auf unserem Discord.</p>
+          </div>
+          <div class="d-stats" hidden>
+            <div><b data-dc="members">–</b><span>Mitglieder</span></div>
+            <div><b data-dc="online">–</b><span><span class="dot" style="background:var(--live)"></span>Online</span></div>
+          </div>
+          <a class="btn btn-discord" href="https://discord.gg/granderoleplay" target="_blank" rel="noopener">Discord beitreten</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- EINSTIEG -->
+  <section class="band band-alt" id="downloads" aria-labelledby="dl-title">
+    <div class="wrap">
+      <header class="sec-head reveal">
+        <span class="eyebrow">Downloads</span>
+        <h2 id="dl-title" class="h-display h2">In vier Schritten <span class="foil">in der Stadt</span></h2>
+        <p class="lead">Das brauchst du, um auf GRANDE zu spielen.</p>
+      </header>
+      <ol class="steps">
+        <li class="step reveal"><h3>GTA V</h3><p>Eine legale Kopie von Grand Theft Auto V.</p><div class="links"><a href="https://store.steampowered.com/app/271590/" target="_blank" rel="noopener">Steam</a><a href="https://store.epicgames.com/de/p/grand-theft-auto-v" target="_blank" rel="noopener">Epic Games</a></div></li>
+        <li class="step reveal"><h3>FiveM</h3><p>Der Multiplayer-Client, über den du dich mit GRANDE verbindest.</p><div class="links"><a href="https://fivem.net/" target="_blank" rel="noopener">FiveM</a></div></li>
+        <li class="step reveal"><h3>Voice</h3><p>TeamSpeak und das SaltyChat-Plugin für den Voice-Chat im Spiel.</p><div class="links"><a href="https://www.teamspeak.com/de/downloads/" target="_blank" rel="noopener">TeamSpeak</a><a href="https://github.com/v10networkscom/saltychat-docs" target="_blank" rel="noopener">SaltyChat</a></div></li>
+        <li class="step reveal"><h3>Discord &amp; Connect</h3><p>Tritt dem Discord bei, lies das Regelwerk und verbinde dich mit dem Server.</p><div class="links"><a href="https://discord.gg/granderoleplay" target="_blank" rel="noopener">Discord</a><a href="fivem://connect/cfx.re/join/qqqepoz">Verbinden</a></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- REGELN KURZ -->
+  <section class="band" id="regeln" aria-labelledby="regeln-title">
+    <div class="wrap rules-teaser">
+      <header class="sec-head reveal">
+        <span class="eyebrow">Regeln</span>
+        <h2 id="regeln-title" class="h-display h2">Fair. Realistisch. <span class="foil">Filmreif.</span></h2>
+        <p class="lead">Unsere Regeln sorgen für faires und realistisches Roleplay, bei dem alle Spass haben.</p>
+        <a class="link-arrow" href="regelwerk.html">Ganzes Regelwerk lesen <span>→</span></a>
+      </header>
+      <ul class="oath reveal">
+        <li>Ab 18 Jahren</li>
+        <li>Respektvoller Umgang ist Pflicht</li>
+        <li>Realistisches, filmreifes Roleplay</li>
+        <li>Null Toleranz bei Rassismus und Sexismus</li>
+        <li>Keine Cheats, keine Bugs ausnutzen</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PHILOSOPHIE -->
+  <section class="quote-band" aria-label="Unsere Philosophie">
+    <div class="bg" style="background-image:url(assets/img/shot1.webp)" aria-hidden="true"></div>
+    <div class="wrap">
+      <blockquote class="reveal">
+        <span class="eyebrow">Unsere Philosophie</span>
+        <p>Bei uns zählt nicht, wer am lautesten ist oder am meisten besitzt, sondern wer die besten Geschichten erzählt.</p>
+        <cite>— GRANDE Team</cite>
+      </blockquote>
+      <a class="btn btn-ghost reveal" href="philosophie.html" style="margin-top:28px">Unsere Philosophie</a>
+    </div>
+  </section>
+
+  <!-- FINALE -->
+  <section class="band" aria-labelledby="finale-title">
+    <div class="wrap finale">
+      <video muted loop playsinline preload="none" poster="assets/video/hero-poster.jpg" aria-hidden="true">
+        <source src="assets/video/logo-reveal.webm" type="video/webm">
+        <source src="assets/video/logo-reveal.mp4" type="video/mp4">
+      </video>
+      <span class="eyebrow">Bereit?</span>
+      <h2 id="finale-title" class="h-display h2">Die Stadt gehört <span class="foil">dir</span></h2>
+      <p class="lead">GRANDE ist eine Community im Aufbau. Komm jetzt dazu und schreib von Anfang an mit an der Geschichte dieser Stadt.</p>
+      <div class="hero-cta" style="animation:none">
+        <a class="btn btn-gold" href="fivem://connect/cfx.re/join/qqqepoz"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4v16l13-8z" fill="currentColor"/></svg>Jetzt spielen</a>
+        <a class="btn btn-ghost" href="https://discord.gg/granderoleplay" target="_blank" rel="noopener">Community beitreten</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="f-brand"><img src="assets/img/logo-grande.webp" alt="" width="480" height="161" loading="lazy"><span>© 2026 GRANDE Roleplay · Fan-Projekt, nicht verbunden mit Rockstar Games oder Take-Two.</span></div>
+    <nav aria-label="Footer"><a href="regelwerk.html">Regelwerk</a><a href="philosophie.html">Philosophie</a><a href="https://discord.gg/granderoleplay" target="_blank" rel="noopener">Discord</a><a href="impressum.html">Impressum &amp; Datenschutz</a></nav>
+  </div>
+</footer>
+
+<div class="action-bar">
+  <a class="btn btn-gold" href="fivem://connect/cfx.re/join/qqqepoz">Jetzt spielen</a>
+  <a class="btn btn-ghost" href="https://discord.gg/granderoleplay" target="_blank" rel="noopener">Discord</a>
+</div>
+
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>
