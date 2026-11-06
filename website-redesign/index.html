@@ -15,7 +15,7 @@
 <link rel="apple-touch-icon" href="assets/img/icon-192.png">
 <link rel="preload" href="assets/fonts/Cinzel.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/BigShouldersDisplay.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/video/hero-poster.jpg" as="image">
+<link rel="preload" href="assets/video/hero-poster.webp" as="image">
 <link rel="stylesheet" href="assets/fonts/fonts.css">
 <link rel="stylesheet" href="assets/css/site.css">
 </head>
@@ -23,9 +23,9 @@
 
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="index.html" aria-label="GRANDE Roleplay – Startseite"><img src="assets/img/logo-grande.webp" alt="GRANDE Roleplay" width="480" height="161"></a>
+    <a class="brand" href="index.html" aria-label="GRANDE Roleplay – Startseite"><img src="assets/img/logo-grande-240.webp" alt="GRANDE Roleplay" width="240" height="81"></a>
     <ul class="nav-links">
-      <li><a href="index.html" aria-current="page">Start</a></li>
+      <li><a href="index.html" aria-current="page">Startseite</a></li>
       <li><a href="#stadt">Die Stadt</a></li>
       <li><a href="#fraktionen">Fraktionen</a></li>
       <li><a href="#status">Status</a></li>
@@ -33,7 +33,7 @@
       <li><a href="philosophie.html">Philosophie</a></li>
     </ul>
     <div class="nav-cta">
-      <a class="btn btn-gold btn-sm" href="https://discord.gg/granderoleplay" target="_blank" rel="noopener">
+      <a class="btn btn-gold btn-sm" href="https://discord.gg/granderoleplay" target="_blank" rel="noopener" aria-label="Discord">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.3 4.4A19.6 19.6 0 0 0 15.4 3l-.6 1.3a18 18 0 0 0-5.6 0L8.6 3a19.5 19.5 0 0 0-4.9 1.4C.6 9 0 13.5.3 18a19.7 19.7 0 0 0 6 3l1.3-2a12.7 12.7 0 0 1-2-1l.5-.4a14 14 0 0 0 11.8 0l.5.4a12.8 12.8 0 0 1-2 1l1.3 2a19.6 19.6 0 0 0 6-3c.4-5.2-.7-9.6-3.4-13.6ZM8.5 15.3c-1.2 0-2.1-1.1-2.1-2.4s.9-2.4 2.1-2.4 2.2 1.1 2.1 2.4c0 1.3-.9 2.4-2.1 2.4Zm7 0c-1.2 0-2.1-1.1-2.1-2.4s.9-2.4 2.1-2.4 2.2 1.1 2.1 2.4c0 1.3-.9 2.4-2.1 2.4Z"/></svg>
         <span class="btn-label">Discord</span>
       </a>
@@ -44,7 +44,7 @@
 
 <nav class="mobile-menu" aria-label="Hauptmenü">
   <button class="menu-btn close" type="button" data-menu aria-label="Menü schliessen" style="display:block"><span style="transform:translateY(5.5px) rotate(45deg)"></span><span style="opacity:0"></span><span style="transform:translateY(-5.5px) rotate(-45deg)"></span></button>
-  <a class="m-link" href="index.html">Start</a>
+  <a class="m-link" href="index.html">Startseite</a>
   <a class="m-link" href="#stadt">Die Stadt</a>
   <a class="m-link" href="#fraktionen">Fraktionen</a>
   <a class="m-link" href="#status">Status</a>
@@ -62,14 +62,12 @@
   <!-- HERO -->
   <section class="hero bars" aria-labelledby="hero-title">
     <div class="hero-media" aria-hidden="true">
-      <video autoplay muted loop playsinline preload="auto" poster="assets/video/hero-poster.jpg">
-        <source src="assets/video/hero-loop.mp4" type="video/mp4">
-      </video>
+      <video autoplay muted loop playsinline preload="metadata" poster="assets/video/hero-poster.webp" data-src-small="assets/video/hero-loop-720.mp4" data-src-large="assets/video/hero-loop.mp4"></video>
     </div>
     <div class="grain" aria-hidden="true"></div>
     <div class="wrap hero-inner">
       <span class="eyebrow">FiveM Roleplay</span>
-      <img class="hero-logo" src="assets/img/logo.webp" alt="GRANDE" width="900" height="429">
+      <img class="hero-logo" src="assets/img/logo-600.webp" srcset="assets/img/logo-600.webp 600w, assets/img/logo-1200.webp 900w" sizes="(max-width: 700px) 82vw, 560px" alt="GRANDE" width="600" height="286" fetchpriority="high">
       <h1 id="hero-title" class="h-display"><span class="foil">Dein Leben. Deine Stadt.</span></h1>
       <p class="lead">Ernsthaftes Roleplay mit eigenen Systemen, einer eigenen Region und einer Community, die gemeinsam Geschichten schreibt.</p>
       <div class="hero-cta">
@@ -185,7 +183,7 @@
         <button class="dossier-tab" role="tab" type="button" id="tab-illegal" aria-controls="d-illegal" aria-selected="false" tabindex="-1">Untergrund</button>
       </div>
 
-      <article class="dossier reveal" id="d-staat" role="tabpanel" aria-labelledby="tab-staat">
+      <div class="dossier reveal" id="d-staat" role="tabpanel" aria-labelledby="tab-staat">
         <div class="dossier-side">
           <span class="stamp">Staatliche Fraktionen</span>
           <div>
@@ -199,9 +197,9 @@
           <li><span class="code">§</span><div><strong>Justiz</strong><span>Teil der staatlichen Fraktionen neben GPD und GMD.</span></div></li>
           <li><span class="code">ZOLL</span><div><strong>Zoll</strong><span>Beschlagnahmte Ware bleibt im Zollhäuschen. Sie wird nicht privat behalten.</span></div></li>
         </ul>
-      </article>
+      </div>
 
-      <article class="dossier" id="d-firmen" role="tabpanel" aria-labelledby="tab-firmen" hidden>
+      <div class="dossier" id="d-firmen" role="tabpanel" aria-labelledby="tab-firmen" hidden>
         <div class="dossier-side">
           <span class="stamp">Firmen &amp; geschützte Berufe</span>
           <div>
@@ -216,9 +214,9 @@
           <li><span class="code">ADS</span><div><strong>Abschleppdienst</strong><span>Geschützter Beruf.</span></div></li>
           <li><span class="code">WZL</span><div><strong>Weazel News</strong><span>Geschützter Beruf.</span></div></li>
         </ul>
-      </article>
+      </div>
 
-      <article class="dossier" id="d-illegal" role="tabpanel" aria-labelledby="tab-illegal" hidden>
+      <div class="dossier" id="d-illegal" role="tabpanel" aria-labelledby="tab-illegal" hidden>
         <div class="dossier-side">
           <span class="stamp">Illegale Fraktionen</span>
           <div>
@@ -232,7 +230,7 @@
           <li><span class="code">48h</span><div><strong>Anwesen stürmen</strong><span>Höchstens einmal pro 48 Stunden pro Fraktion, zwischen 19 und 0 Uhr.</span></div></li>
           <li><span class="code">$</span><div><strong>Überfälle</strong><span>Grosse Überfälle (Juwelier, Staatsbank) gibt es pro Gruppe einmal in 24 Stunden.</span></div></li>
         </ul>
-      </article>
+      </div>
 
       <div class="dossier-foot">
         <span>Alle Angaben aus dem offiziellen Regelwerk.</span>
@@ -251,7 +249,7 @@
       <div class="status-grid">
         <article class="pass reveal" data-status data-state="loading" aria-live="polite">
           <div class="pass-top">
-            <div class="pass-brand"><img src="assets/img/logo-grande.webp" alt="" width="480" height="161"><span class="pass-label">Server-Status</span></div>
+            <div class="pass-brand"><img src="assets/img/logo-grande-240.webp" alt="" width="240" height="81"><span class="pass-label">Server-Status</span></div>
             <span class="badge"><span class="dot"></span><span data-st="label">Status wird geladen …</span></span>
           </div>
           <div class="pass-count"><span class="num" data-st="players">–</span><span class="of">/ <span data-st="max">–</span></span><span class="unit">Spieler</span></div>
@@ -319,7 +317,7 @@
 
   <!-- PHILOSOPHIE -->
   <section class="quote-band" aria-label="Unsere Philosophie">
-    <div class="bg" style="background-image:url(assets/img/shot1.webp)" aria-hidden="true"></div>
+    <img class="bg" src="assets/img/shot1.webp" alt="" loading="lazy" decoding="async" width="1672" height="941">
     <div class="wrap">
       <blockquote class="reveal">
         <span class="eyebrow">Unsere Philosophie</span>
@@ -333,7 +331,7 @@
   <!-- FINALE -->
   <section class="band" aria-labelledby="finale-title">
     <div class="wrap finale">
-      <video muted loop playsinline preload="none" poster="assets/video/hero-poster.jpg" aria-hidden="true">
+      <video muted loop playsinline preload="none" poster="assets/video/hero-poster.webp" aria-hidden="true">
         <source src="assets/video/logo-reveal.webm" type="video/webm">
         <source src="assets/video/logo-reveal.mp4" type="video/mp4">
       </video>
@@ -350,7 +348,7 @@
 
 <footer class="footer">
   <div class="wrap">
-    <div class="f-brand"><img src="assets/img/logo-grande.webp" alt="" width="480" height="161" loading="lazy"><span>© 2026 GRANDE Roleplay · Fan-Projekt, nicht verbunden mit Rockstar Games oder Take-Two.</span></div>
+    <div class="f-brand"><img src="assets/img/logo-grande-240.webp" alt="" width="240" height="81" loading="lazy"><span>© 2026 GRANDE Roleplay · Fan-Projekt, nicht verbunden mit Rockstar Games oder Take-Two.</span></div>
     <nav aria-label="Footer"><a href="regelwerk.html">Regelwerk</a><a href="philosophie.html">Philosophie</a><a href="https://discord.gg/granderoleplay" target="_blank" rel="noopener">Discord</a><a href="impressum.html">Impressum &amp; Datenschutz</a></nav>
   </div>
 </footer>

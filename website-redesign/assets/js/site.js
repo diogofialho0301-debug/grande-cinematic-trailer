@@ -52,6 +52,10 @@
 
   /* ---------- hero video: only play when visible / not reduced motion ---------- */
   var hv = $('.hero-media video');
+  if (hv && hv.dataset.srcLarge) {
+    // phones get the lighter 720p loop; the video starts after the page itself has loaded
+    hv.src = innerWidth < 900 ? hv.dataset.srcSmall : hv.dataset.srcLarge;
+  }
   if (hv) {
     if (reduce) { hv.removeAttribute('autoplay'); hv.pause(); }
     else {
@@ -237,10 +241,15 @@
     }
     var tmr; box.addEventListener('input', function () { clearTimeout(tmr); tmr = setTimeout(search, 200); });
     box.addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); if (marks.length) go(cur + 1); else search(); } });
-    // deep links: #regelwerk / #streaming / #fraktionen or a rule id
-    var h = location.hash.slice(1);
-    if (h && tabs.some(function (t) { return t.dataset.tab === h; })) show(h);
-    else if (h) { var el = document.getElementById(h); if (el && el.tagName === 'DETAILS') { show(el.closest('.r-panel').dataset.panel); el.open = true; setTimeout(function () { el.scrollIntoView({ block: 'start' }); }, 60); } else buildToc(); }
-    else buildToc();
+    // deep links: #regelwerk / #streaming / #fraktionen or a rule id (on load and on in-page hash changes)
+    function route() {
+      var h = location.hash.slice(1);
+      if (h && tabs.some(function (t) { return t.dataset.tab === h; })) { show(h); return; }
+      var el = h && document.getElementById(h);
+      if (el && el.tagName === 'DETAILS') { show(el.closest('.r-panel').dataset.panel); el.open = true; setTimeout(function () { el.scrollIntoView({ block: 'start' }); }, 60); return; }
+      buildToc();
+    }
+    window.addEventListener('hashchange', route);
+    route();
   }
 })();

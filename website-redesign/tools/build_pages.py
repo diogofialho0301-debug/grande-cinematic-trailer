@@ -7,7 +7,7 @@ DISCORD_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentCo
 DESC = "GRANDE Roleplay: ernsthaftes FiveM-Roleplay mit eigenen Scripts, Cayo Porto, Grenze und Zoll, Werkstätten und vielen legalen Jobs."
 
 def page(slug, title, desc, body):
-    nav = [('index.html', 'Start'), ('index.html#stadt', 'Die Stadt'), ('index.html#fraktionen', 'Fraktionen'), ('index.html#status', 'Status'), ('regelwerk.html', 'Regelwerk'), ('philosophie.html', 'Philosophie')]
+    nav = [('index.html', 'Startseite'), ('index.html#stadt', 'Die Stadt'), ('index.html#fraktionen', 'Fraktionen'), ('index.html#status', 'Status'), ('regelwerk.html', 'Regelwerk'), ('philosophie.html', 'Philosophie')]
     links = ''.join(f'<li><a href="{h}"{" aria-current=\"page\"" if h == slug + ".html" else ""}>{t}</a></li>' for h, t in nav)
     mlinks = ''.join(f'<a class="m-link" href="{h}">{t}</a>' for h, t in nav + [('impressum.html', 'Impressum')])
     return f'''<!doctype html>
@@ -31,10 +31,10 @@ def page(slug, title, desc, body):
 <body>
 <header class="nav solid">
   <div class="wrap">
-    <a class="brand" href="index.html" aria-label="GRANDE Roleplay – Startseite"><img src="assets/img/logo-grande.webp" alt="GRANDE Roleplay" width="480" height="161"></a>
+    <a class="brand" href="index.html" aria-label="GRANDE Roleplay – Startseite"><img src="assets/img/logo-grande-240.webp" alt="GRANDE Roleplay" width="240" height="81"></a>
     <ul class="nav-links">{links}</ul>
     <div class="nav-cta">
-      <a class="btn btn-gold btn-sm" href="https://discord.gg/granderoleplay" target="_blank" rel="noopener">{DISCORD_SVG}<span class="btn-label">Discord</span></a>
+      <a class="btn btn-gold btn-sm" href="https://discord.gg/granderoleplay" target="_blank" rel="noopener" aria-label="Discord">{DISCORD_SVG}<span class="btn-label">Discord</span></a>
       <button class="menu-btn" type="button" data-menu aria-expanded="false" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -47,7 +47,7 @@ def page(slug, title, desc, body):
 {body}
 <footer class="footer">
   <div class="wrap">
-    <div class="f-brand"><img src="assets/img/logo-grande.webp" alt="" width="480" height="161" loading="lazy"><span>© 2026 GRANDE Roleplay · Fan-Projekt, nicht verbunden mit Rockstar Games oder Take-Two.</span></div>
+    <div class="f-brand"><img src="assets/img/logo-grande-240.webp" alt="" width="240" height="81" loading="lazy"><span>© 2026 GRANDE Roleplay · Fan-Projekt, nicht verbunden mit Rockstar Games oder Take-Two.</span></div>
     <nav aria-label="Footer"><a href="regelwerk.html">Regelwerk</a><a href="philosophie.html">Philosophie</a><a href="https://discord.gg/granderoleplay" target="_blank" rel="noopener">Discord</a><a href="impressum.html">Impressum &amp; Datenschutz</a></nav>
   </div>
 </footer>
@@ -67,7 +67,8 @@ rules = re.sub(r'(<table.*?</table>)', r'<div class="r-table-wrap">\1</div>', ru
 stand = re.search(r'<p class="rules-stand">(.*?)</p>', src, re.S).group(1)
 rw_body = f'''<div class="rw-progress" aria-hidden="true"></div>
 <main>
-  <section class="page-hero" style="--hero-img:url(assets/img/shot1-900.webp)">
+  <section class="page-hero">
+    <div class="page-hero-bg" style="background-image:url(assets/img/shot1-900.webp)" aria-hidden="true"></div>
     <div class="wrap">
       <span class="eyebrow">GRANDE Roleplay</span>
       <h1 class="h-display"><span class="foil">Regelwerk</span></h1>
@@ -95,7 +96,8 @@ rw_body = f'''<div class="rw-progress" aria-hidden="true"></div>
 
 # ---------------- Philosophie (original text) ----------------
 ph_body = '''<main>
-  <section class="page-hero" style="--hero-img:url(assets/img/shot1.webp)">
+  <section class="page-hero">
+    <div class="page-hero-bg" style="background-image:url(assets/img/shot1.webp)" aria-hidden="true"></div>
     <div class="wrap">
       <span class="eyebrow">GRANDE Roleplay</span>
       <h1 class="h-display">Unsere <span class="foil">Philosophie</span></h1>
@@ -118,7 +120,7 @@ ph_body = '''<main>
     <div class="wrap"><ul class="pillars"><li class="chip">Kein OOC</li><li class="chip">Respekt</li><li class="chip">Immersion</li><li class="chip">Storylines</li><li class="chip">Gemeinschaft</li></ul></div>
   </section>
   <section class="quote-band" aria-label="Zitat">
-    <div class="bg" style="background-image:url(assets/img/shot1.webp)" aria-hidden="true"></div>
+    <img class="bg" src="assets/img/shot1.webp" alt="" loading="lazy" decoding="async" width="1672" height="941">
     <div class="wrap"><blockquote class="reveal"><p>Bei uns zählt nicht, wer am lautesten ist oder am meisten besitzt, sondern wer die besten Geschichten erzählt.</p><cite>— GRANDE Team</cite></blockquote></div>
   </section>
   <section class="band">
@@ -163,7 +165,7 @@ im_body = '''<main>
   </section>
   <section class="wrap" style="padding-bottom:110px">
     <div class="notice" style="margin-bottom:48px;text-align:center">
-      <h3>Legal Disclaimer / Haftungsausschluss</h3>
+      <h2 class="notice-title">Legal Disclaimer / Haftungsausschluss</h2>
       <p class="disclaimer">"GRANDE ROLEPLAY IS NOT APPROVED, SPONSORED, OR ENDORSED BY ROCKSTAR GAMES."</p>
       <p style="margin-bottom:0">GRANDE Roleplay ist nicht von Rockstar Games genehmigt, gesponsert oder unterstützt.</p>
     </div>
