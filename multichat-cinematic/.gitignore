@@ -1,2 +1,3 @@
 build/
 voices/*.onnx
+__pycache__/
