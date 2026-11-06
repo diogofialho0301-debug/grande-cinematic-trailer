@@ -38,3 +38,18 @@ cd multichat-cinematic
 ```
 
 Echte Sprachaufnahmen oder lizenzierte SFX lassen sich später einsetzen. In `audio.py` ersetzt man dafür den jeweiligen `say(...)`-Aufruf bzw. die Effektfunktion durch das Laden einer WAV-Datei. Die Platzierung (Zeit, Richtung, Entfernung) bleibt dabei erhalten.
+
+## Final-Version mit ElevenLabs-Stimme: `GRANDE_MULTICHAT_FINAL.mp4`
+
+* **Bild:** 1:1 aus `GRANDE_MULTICHAT_CINEMATIC.mp4` übernommen (Videospur kopiert, MD5 identisch).
+* **Frauenstimme:** ausschließlich die ElevenLabs-Aufnahme `assets/elevenlabs_hope.mp3`. Alle künstlichen TTS-Frauenstimmen wurden entfernt: Gespräche, Lachen, Schreie, Echos.
+  * 0,25 s: „Hey, na? Alles gut bei dir?“
+  * 2,75 s: „Komm schon, lass uns tanzen.“
+  * 4,45 s: „Ey! Hörst du mir überhaupt zu?“ (am linken Ohr)
+  * 4,0 s: „Du siehst heute aber echt gut aus.“ (verlangsamtes Echo)
+  * 5,3 s: „Hä? Was ist denn mit dir los?“
+  * 7,12 s: „Ah! Scheiße! Was war das?“
+  * 9,0 s: „Oh mein Gott! Lauft! Lauft!“
+  * Ihr „Ah!“ ist zusätzlich als Schrei im Raum verteilt.
+* Erhalten bleiben Clubmusik, Bass, Schüsse, Umgebung und die Männerstimmen aus der vorherigen Version.
+* Neu bauen: `python3 audio_final.py build/audio_final.wav`, danach die Audiospur ins bestehende MP4 muxen (`-c:v copy`).
